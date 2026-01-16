@@ -1,3 +1,24 @@
 spring:
   application:
     name: zadanie
+  datasource:
+    url: jdbc:postgresql://localhost:5432/zadanie_db
+    username: zadanie_user
+    password: zadanie_pass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# SpringDoc OpenAPI Configuration
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true

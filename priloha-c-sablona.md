@@ -15,7 +15,7 @@
 Vyplň približný čas strávený s každým nástrojom:
 
 - [ ] **Cursor IDE:** _____ hodín
-- [x] **Claude Code:** _____ hodín  
+- [x] **Claude Code:** 1 hodín  
 - [ ] **GitHub Copilot:** _____ hodín
 - [ ] **ChatGPT:** _____ hodín
 - [ ] **Claude.ai:** _____ hodín
@@ -31,8 +31,8 @@ Vyplň približný čas strávený s každým nástrojom:
 
 ### Prompt #1: /init
 
-**Nástroj:** [ Claude Code]  
-**Kontext:** [ Setup projektu ]
+**Nástroj:** Claude Code  
+**Kontext:** Setup projektu
 
 **Prompt:**
 ```
@@ -44,35 +44,131 @@ Vyplň približný čas strávený s každým nástrojom:
 
 **Čo som musel upraviť / opraviť:**
 ```
-[Popíš čo si musel zmeniť. Ak nič, napíš "Nič, fungoval perfektne"]
 ```
 
 **Poznámky / Learnings:**
 ```
-[Prečo fungoval / nefungoval? Čo by si urobil inak?]
 ```
+undo changing java from 21 to 17 and go back to 21
+jdk 21 is installed continue. And do not change the java version in project
+### Prompt #2: /enhance-initial, /generate-prp, /execute-prp
 
-
-
-### Prompt #2: _________________________________
-
-**Nástroj:** _________________  
-**Kontext:** _________________
+**Nástroj:** Claude Code 
+**Kontext:** Vygenerovanie PRP a spustenie
 
 **Prompt:**
 ```
+/enhance-initial, /generate-prp, /execute-prp
 ```
 
 **Výsledok:**  
-
+```
+Claude upravil moj initial.md subor a pripravil celkom dobre PRP
+```
 **Úpravy:**
 ```
 ```
 
 **Poznámky:**
 ```
+Pri spusteni execute-prp mal problem s java verziou. Nastavil som projektu verziu 21
+ale nevedel najst verzio openjdk pretoze v PC som mal nejaku ms-openjdk a mal s tym problem.
+Tak sa snazil spustit download ale neuspesne. A nakoniec zmenil java verziu na 17 a tam som
+ho stopol. 
 ```
 
+### Prompt #3: undo changing java from 21 to 17 and go back to 21
+
+
+**Nástroj:** Claude Code  
+**Kontext:** Oprava chyby ktoru sposobil
+
+**Prompt:**
+```
+undo changing java from 21 to 17 and go back to 21
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)
+
+**Čo som musel upraviť / opraviť:**
+```
+Vysledok bol v poriadku nastavil vsetko spat na java 21 ale stale mal problem
+s ms-openjdk verziou a musel som ju rucne nainstalovat cez CMD
+```
+
+**Poznámky / Learnings:**
+```
+```
+
+### Prompt #3: jdk 21 is installed continue. And do not change the java version in project
+
+**Nástroj:** Claude Code  
+**Kontext:** Oprava chyby ktoru sposobil
+
+**Prompt:**
+```
+undo changing java from 21 to 17 and go back to 21
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)
+
+**Čo som musel upraviť / opraviť:**
+```
+Nakoniec som musel nainstalovat rucne openjdk 21 verziu lebo stale sa cyklil a chcel zmenit
+verziu na java 17. Pravdepodobne preto lebo som mal nainstalovanu openjdk 17.
+```
+
+**Poznámky / Learnings:**
+```
+Asi by som mu explicitne povedal v user-module.md ze nemen java verziu a pouzi existujucu ms-openjdk-21.
+```
+
+### Prompt #4: run next step
+
+**Nástroj:** Claude Code  
+**Kontext:** Dokoncenie PRP
+
+**Prompt:**
+```
+run next step
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)  
+
+**Čo som musel upraviť / opraviť:**
+```
+```
+
+**Poznámky / Learnings:**
+```
+Dokoncil PRP v poriadku bez problemov aj s testami.
+```
+
+### Prompt #5: Lepsie usporiadanie package-ov
+
+**Nástroj:** Claude Code  
+**Kontext:** Uprava package-ov
+
+**Prompt:**
+```
+move the @symbol:GlobalExceptionHandler  to the new package com.example.api.error
+move the package com.example.zadanie.controller and com.example.zadanie.dto to the com.example.zadanie.api
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)
+
+**Čo som musel upraviť / opraviť:**
+```
+```
+
+**Poznámky / Learnings:**
+```
+Keby to robim od zaciatku tak mu hned definujem ako chcem aby vyzeral projektovy strom.
+```
 ---
 
 ## 3. Problémy a Riešenia 
