@@ -5,6 +5,7 @@ import com.example.zadanie.api.dto.UserUpdateRequest;
 import com.example.zadanie.entity.User;
 import com.example.zadanie.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,6 +17,7 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
@@ -34,7 +36,7 @@ public class UserService {
         User user = new User();
         user.setName(request.getName());
         user.setEmail(request.getEmail());
-        user.setPassword(request.getPassword()); // TODO: Hash password if security is needed
+        user.setPassword(passwordEncoder.encode(request.getPassword())); // Hash password
 
         return userRepository.save(user);
     }

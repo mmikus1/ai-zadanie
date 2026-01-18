@@ -169,6 +169,70 @@ move the package com.example.zadanie.controller and com.example.zadanie.dto to t
 ```
 Keby to robim od zaciatku tak mu hned definujem ako chcem aby vyzeral projektovy strom.
 ```
+
+### Prompt #6: Auth module
+
+**Nástroj:** Claude Code  
+**Kontext:** Priprava PRP a vygenerovanie Auth module
+
+**Prompt:**
+```
+/enhance-initial, /generate-prp, /execute-prp
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)
+
+**Čo som musel upraviť / opraviť:**
+```
+```
+
+**Poznámky / Learnings:**
+```
+```
+
+### Prompt #7: JWT token v user module
+
+**Nástroj:** Claude Code  
+**Kontext:** Pouzitie JWT token v user module
+
+**Prompt:**
+```
+Extend User module with existing JWT auth mechanism. User module endpoints can be accessed only with JWT token
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)
+
+**Čo som musel upraviť / opraviť:**
+```
+```
+
+**Poznámky / Learnings:**
+```
+```
+
+### Prompt #8: Fix JWT filter
+
+**Nástroj:** Claude Code  
+**Kontext:** Ak vyhodil exception nevratil ziadny status ale pustil usera dalej
+
+**Prompt:**
+```
+Do not continue without authentication  in @symbol:JwtAuthenticationFilter 
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)
+
+**Čo som musel upraviť / opraviť:**
+```
+```
+
+**Poznámky / Learnings:**
+```
+```
+
 ---
 
 ## 3. Problémy a Riešenia 
