@@ -15,7 +15,7 @@
 Vyplň približný čas strávený s každým nástrojom:
 
 - [ ] **Cursor IDE:** _____ hodín
-- [x] **Claude Code:** 1 hodín  
+- [x] **Claude Code:** 2 hodín  
 - [ ] **GitHub Copilot:** _____ hodín
 - [ ] **ChatGPT:** _____ hodín
 - [ ] **Claude.ai:** _____ hodín
@@ -101,7 +101,7 @@ s ms-openjdk verziou a musel som ju rucne nainstalovat cez CMD
 ```
 ```
 
-### Prompt #3: jdk 21 is installed continue. And do not change the java version in project
+### Prompt #4: jdk 21 is installed continue. And do not change the java version in project
 
 **Nástroj:** Claude Code  
 **Kontext:** Oprava chyby ktoru sposobil
@@ -125,7 +125,7 @@ verziu na java 17. Pravdepodobne preto lebo som mal nainstalovanu openjdk 17.
 Asi by som mu explicitne povedal v user-module.md ze nemen java verziu a pouzi existujucu ms-openjdk-21.
 ```
 
-### Prompt #4: run next step
+### Prompt #5: run next step
 
 **Nástroj:** Claude Code  
 **Kontext:** Dokoncenie PRP
@@ -147,7 +147,7 @@ run next step
 Dokoncil PRP v poriadku bez problemov aj s testami.
 ```
 
-### Prompt #5: Lepsie usporiadanie package-ov
+### Prompt #6: Lepsie usporiadanie package-ov
 
 **Nástroj:** Claude Code  
 **Kontext:** Uprava package-ov
@@ -170,7 +170,7 @@ move the package com.example.zadanie.controller and com.example.zadanie.dto to t
 Keby to robim od zaciatku tak mu hned definujem ako chcem aby vyzeral projektovy strom.
 ```
 
-### Prompt #6: Auth module
+### Prompt #7: Auth module
 
 **Nástroj:** Claude Code  
 **Kontext:** Priprava PRP a vygenerovanie Auth module
@@ -191,7 +191,7 @@ Keby to robim od zaciatku tak mu hned definujem ako chcem aby vyzeral projektovy
 ```
 ```
 
-### Prompt #7: JWT token v user module
+### Prompt #8: JWT token v user module
 
 **Nástroj:** Claude Code  
 **Kontext:** Pouzitie JWT token v user module
@@ -212,7 +212,7 @@ Extend User module with existing JWT auth mechanism. User module endpoints can b
 ```
 ```
 
-### Prompt #8: Fix JWT filter
+### Prompt #9: Fix JWT filter
 
 **Nástroj:** Claude Code  
 **Kontext:** Ak vyhodil exception nevratil ziadny status ale pustil usera dalej
@@ -220,6 +220,27 @@ Extend User module with existing JWT auth mechanism. User module endpoints can b
 **Prompt:**
 ```
 Do not continue without authentication  in @symbol:JwtAuthenticationFilter 
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)
+
+**Čo som musel upraviť / opraviť:**
+```
+```
+
+**Poznámky / Learnings:**
+```
+```
+
+### Prompt #10: Fix JWT filter
+
+**Nástroj:** Claude Code  
+**Kontext:** Generovanie Product module
+
+**Prompt:**
+```
+/enhance-initial, /generate-prp, /execute-prp
 ```
 
 **Výsledok:**  
