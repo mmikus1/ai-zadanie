@@ -233,7 +233,49 @@ Do not continue without authentication  in @symbol:JwtAuthenticationFilter
 ```
 ```
 
-### Prompt #10: Fix JWT filter
+### Prompt #10: Order a Product modul
+
+**Nástroj:** Claude Code  
+**Kontext:** Generovanie Product module
+
+**Prompt:**
+```
+/enhance-initial, /generate-prp, /execute-prp
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)
+
+**Čo som musel upraviť / opraviť:**
+```
+```
+
+**Poznámky / Learnings:**
+```
+```
+
+### Prompt #11: generate integration tests for the Controllers
+
+**Nástroj:** Claude Code  
+**Kontext:** Generovanie Product module
+
+**Prompt:**
+```
+generate integration tests for the Controllers
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)
+
+**Čo som musel upraviť / opraviť:**
+```
+```
+
+**Poznámky / Learnings:**
+```
+```
+
+### Prompt #12: DB versioning, seeder s Liquibase
 
 **Nástroj:** Claude Code  
 **Kontext:** Generovanie Product module

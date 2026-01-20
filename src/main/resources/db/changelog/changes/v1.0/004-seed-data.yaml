@@ -1,0 +1,211 @@
+databaseChangeLog:
+  - changeSet:
+      id: v1.0-004-seed-data
+      author: liquibase
+      context: prod
+      changes:
+        # Seed Users with BCrypt-hashed passwords
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: name
+                  value: Admin User
+              - column:
+                  name: email
+                  value: admin@example.com
+              - column:
+                  name: password
+                  value: $2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: name
+                  value: John Doe
+              - column:
+                  name: email
+                  value: john.doe@example.com
+              - column:
+                  name: password
+                  value: $2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy
+
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: name
+                  value: Jane Smith
+              - column:
+                  name: email
+                  value: jane.smith@example.com
+              - column:
+                  name: password
+                  value: $2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy
+
+        # Seed Products
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: Laptop Pro 15
+              - column:
+                  name: description
+                  value: High-performance laptop with 15-inch display, 16GB RAM, 512GB SSD
+              - column:
+                  name: price
+                  valueNumeric: 1299.99
+              - column:
+                  name: stock
+                  valueNumeric: 50
+
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: Wireless Mouse
+              - column:
+                  name: description
+                  value: Ergonomic wireless mouse with precision tracking
+              - column:
+                  name: price
+                  valueNumeric: 29.99
+              - column:
+                  name: stock
+                  valueNumeric: 200
+
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: USB-C Hub
+              - column:
+                  name: description
+                  value: 7-in-1 USB-C hub with HDMI, USB 3.0, and card reader
+              - column:
+                  name: price
+                  valueNumeric: 49.99
+              - column:
+                  name: stock
+                  valueNumeric: 150
+
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: Mechanical Keyboard
+              - column:
+                  name: description
+                  value: RGB mechanical keyboard with tactile switches
+              - column:
+                  name: price
+                  valueNumeric: 89.99
+              - column:
+                  name: stock
+                  valueNumeric: 75
+
+        - insert:
+            tableName: products
+            columns:
+              - column:
+                  name: name
+                  value: Monitor 27-inch 4K
+              - column:
+                  name: description
+                  value: 27-inch 4K UHD monitor with HDR support
+              - column:
+                  name: price
+                  valueNumeric: 399.99
+              - column:
+                  name: stock
+                  valueNumeric: 30
+
+        # Seed Orders (assuming user IDs 1-3 and product IDs 1-5)
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: user_id
+                  valueNumeric: 1
+              - column:
+                  name: product_id
+                  valueNumeric: 1
+              - column:
+                  name: quantity
+                  valueNumeric: 1
+              - column:
+                  name: total
+                  valueNumeric: 1299.99
+              - column:
+                  name: status
+                  value: COMPLETED
+
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: user_id
+                  valueNumeric: 2
+              - column:
+                  name: product_id
+                  valueNumeric: 2
+              - column:
+                  name: quantity
+                  valueNumeric: 2
+              - column:
+                  name: total
+                  valueNumeric: 59.98
+              - column:
+                  name: status
+                  value: PENDING
+
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: user_id
+                  valueNumeric: 2
+              - column:
+                  name: product_id
+                  valueNumeric: 4
+              - column:
+                  name: quantity
+                  valueNumeric: 1
+              - column:
+                  name: total
+                  valueNumeric: 89.99
+              - column:
+                  name: status
+                  value: PROCESSING
+
+        - insert:
+            tableName: orders
+            columns:
+              - column:
+                  name: user_id
+                  valueNumeric: 3
+              - column:
+                  name: product_id
+                  valueNumeric: 5
+              - column:
+                  name: quantity
+                  valueNumeric: 1
+              - column:
+                  name: total
+                  valueNumeric: 399.99
+              - column:
+                  name: status
+                  value: COMPLETED
+
+      rollback:
+        - delete:
+            tableName: orders
+        - delete:
+            tableName: products
+        - delete:
+            tableName: users
