@@ -15,7 +15,7 @@
 Vyplň približný čas strávený s každým nástrojom:
 
 - [ ] **Cursor IDE:** _____ hodín
-- [x] **Claude Code:** 2 hodín  
+- [x] **Claude Code:** 4 hodín  
 - [ ] **GitHub Copilot:** _____ hodín
 - [ ] **ChatGPT:** _____ hodín
 - [ ] **Claude.ai:** _____ hodín
