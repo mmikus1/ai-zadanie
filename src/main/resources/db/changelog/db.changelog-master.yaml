@@ -7,3 +7,5 @@ databaseChangeLog:
       file: db/changelog/changes/v1.0/003-create-orders-table.yaml
   - include:
       file: db/changelog/changes/v1.0/004-seed-data.yaml
+  - include:
+      file: db/changelog/changes/v1.0/005-create-notifications-table.yaml

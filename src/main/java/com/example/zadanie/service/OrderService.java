@@ -24,6 +24,7 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final ProductRepository productRepository;
     private final UserRepository userRepository;
+    private final OrderEventProducer orderEventProducer;
 
     public List<Order> getAllOrders() {
         return orderRepository.findAll();
@@ -76,7 +77,12 @@ public class OrderService {
         productRepository.save(product);
 
         // 7. Save order
-        return orderRepository.save(order);
+        Order savedOrder = orderRepository.save(order);
+
+        // 8. Publish OrderCreatedEvent to Kafka
+        orderEventProducer.publishOrderCreated(savedOrder);
+
+        return savedOrder;
     }
 
     @Transactional

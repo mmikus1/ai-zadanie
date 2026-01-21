@@ -38,6 +38,9 @@ class OrderServiceTest {
     @Mock
     private UserRepository userRepository;
 
+    @Mock
+    private OrderEventProducer orderEventProducer;
+
     @InjectMocks
     private OrderService orderService;
 
