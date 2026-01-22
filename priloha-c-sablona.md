@@ -296,55 +296,57 @@ generate integration tests for the Controllers
 ```
 ```
 
+### Prompt #12: Kafka, Event driven 
+
+**Nástroj:** Claude Code  
+**Kontext:** Implementacia event driven casti zadania
+
+**Prompt:**
+```
+/enhance-initial, /generate-prp, /execute-prp
+```
+
+**Výsledok:**  
+[ ] ✅ Fungoval perfektne (first try)
+
+**Čo som musel upraviť / opraviť:**
+```
+```
+
+**Poznámky / Learnings:**
+```
+```
+
 ---
 
 ## 3. Problémy a Riešenia 
 
 > 💡 **Tip:** Problémy sú cenné! Ukazujú ako riešiš problémy s AI.
 
-### Problém #1: _________________________________
+### Problém #1: Swagger bol zle nakonfigurovany v SecurityConfig
 
 **Čo sa stalo:**
 ```
-[Detailný popis problému - čo nefungovalo? Aká bola chyba?]
+Nevygeneroval správne výnimky pre Swagger UI a API docs v SecurityConfig triede.
 ```
 
 **Prečo to vzniklo:**
 ```
-[Tvoja analýza - prečo AI toto vygeneroval? Čo bolo v prompte zlé?]
 ```
 
 **Ako som to vyriešil:**
 ```
-[Krok za krokom - čo si urobil? Upravil prompt? Prepísal kód? Použil iný nástroj?]
+Opytal som sa v AI chat kde je problem a navrhol opravu ktora fungovala
 ```
 
 **Čo som sa naučil:**
 ```
-[Konkrétny learning pre budúcnosť - čo budeš robiť inak?]
+I ked to vyzera vsetko pekne vygenerovane a spravne aj tak to treba vzdy overit.
 ```
 
 **Screenshot / Kód:** [ ] Priložený
 
 ---
-
-### Problém #2: _________________________________
-
-**Čo sa stalo:**
-```
-```
-
-**Prečo:**
-```
-```
-
-**Riešenie:**
-```
-```
-
-**Learning:**
-```
-```
 
 ## 4. Kľúčové Poznatky
 
@@ -352,7 +354,8 @@ generate integration tests for the Controllers
 
 **1.** 
 ```
-[Príklad: Claude Code pre OAuth - fungoval first try, zero problémov]
+Uprava INITIAL a vygenerovanie PRP nema chybu a dost som bol pozitivne prekvapeny. Aj kod je vygenerovany relativne spravne. 
+I ked by som zmenil nejake drobnosti ako userId v body metodach a pod.
 ```
 
 **2.** 
@@ -430,10 +433,14 @@ generate integration tests for the Controllers
 
 ### 6.1 Efektivita AI nástrojov
 
-**Ktorý nástroj bol najužitočnejší?** _________________________________
+**Ktorý nástroj bol najužitočnejší?** Claude Code
 
 **Prečo?**
 ```
+Paci sa mi ze to je v konzole a priamo vie upravit subory. Navyse som sa dnes (22. januar 2026)
+dozvedel ze claude code sa da integrovat s ollama cize prakticky to viem pouzivat zadarmo.
+(Este to ale musim overit ako to realne funguje)
+
 ```
 
 **Ktorý nástroj bol najmenej užitočný?** _________________________________
@@ -446,14 +453,17 @@ generate integration tests for the Controllers
 
 ### 6.2 Najväčšie prekvapenie
 ```
-[Čo ťa najviac prekvapilo pri práci s AI?]
+Kedze ako hobby som hudobnik a casto sa zabavam s mixom a EQ vytvoril som si CLAUDE file
+kde ako context som mu zadal ake typy nastrojov a efektov som pouzil pri nahravani, ako som to nahral
+a dal som mu priklad nejakej pesnicky a zanru ako to chcem aby to znelo. 
+Zadal som mu aky program pozivam na mixovanie. A ked som applikoval jeho tipy tak mozem povedat ze ten 
+solidny zaklad mi dodal. A to som ostal dost prekvapeny.
 ```
 
 ---
 
 ### 6.3 Najväčšia frustrácia
 ```
-[Čo bolo najfrustrujúcejšie?]
 ```
 
 ---
@@ -472,5 +482,7 @@ generate integration tests for the Controllers
 
 ### 6.6 Hlavný odkaz pre ostatných
 ```
-[Keby si mal povedať jednu vec kolegom o AI development, čo by to bylo?]
+Treba to zacat pouzivat. Nemyslim si ze nam to zoberie pracu ale napriklad do teraz ta managment tlacil
+urobit jeden projekt rocne no a myslim si ze po novom to bude 3 projekty rocne :D. Vsetko to urychli a bude 
+sa dodavat viac ficur. 
 ```
